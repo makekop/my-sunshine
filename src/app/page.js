@@ -12,6 +12,7 @@ const App = () => {
     const past_days = 10;
 
     async function getSunShineData() {
+        "use server";
         try {
             const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=${daily}&timezone=${timezone}&past_days=${past_days}`;
             const res = await fetch(url);
