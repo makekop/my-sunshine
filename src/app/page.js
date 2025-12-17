@@ -38,14 +38,16 @@ export default function App() {
                 ))}
             </ul>
             <div>
-                <button onClick={() => setPastDays(10)}>Get 10 pastDays</button>
+                <button onClick={() => setPastDays(10)}>Get 10</button>
             </div>
             <div>
                 {" "}
-                <button onClick={() => setForecastDays(10)}>
-                    Get 10 forecastDays
-                </button>
+                <button onClick={() => setPastDays(5)}>Get 5</button>
             </div>
+            {/* This is the forecast part, which is not necessary yet <div>
+                {" "}
+                <button onClick={() => setForecastDays(5)}>Get 5</button>
+            </div>*/}
             <div>{total}</div>
             {loading && <p>Loading...</p>}
         </div>
