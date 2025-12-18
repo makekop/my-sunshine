@@ -28,13 +28,9 @@ export async function getSunShineData(past_days = 0, forecast_days = 0) {
             let m = Math.floor((sum % 3600) / 60);
             let s = Math.floor((sum % 3600) % 60);
 
-            const hDisplay =
-                h > 0 ? h + (h === 1 ? " hour, " : " hours, ") : "";
-            const mDisplay =
-                m > 0 ? m + (m === 1 ? " minute, " : " minutes, ") : "";
-            const sDisplay =
-                s > 0 ? s + (s === 1 ? " second" : " seconds") : "";
-            return hDisplay + mDisplay + sDisplay;
+            const hDisplay = h > 0 ? h + (h === 1 ? " hour " : " h ") : "";
+            const mDisplay = m > 0 ? m + (m === 1 ? " minute" : " min ") : "";
+            return hDisplay + mDisplay;
         }
         const sunshineTotal = sunshineTotalReturn(sumWithSunInitial);
 

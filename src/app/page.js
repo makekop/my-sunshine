@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import { getSunShineData } from "./actions";
+import Button from "./Button";
 
 export default function App() {
-    const [pastDays, setPastDays] = useState(5);
+    const [pastDays, setPastDays] = useState(1);
     const [forecastDays, setForecastDays] = useState(0);
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -25,8 +26,22 @@ export default function App() {
         load();
     }, [pastDays, forecastDays, total]);
     return (
-        <div className="">
-            <ul>
+        <div className="mx-auto flex flex-col items-center max-w-max gap-4 rounded-xl bg-gray-700 p-6 font-arial tracking-tight dark:outline-white/10">
+            <div className="text-4xl font-semibold text-center">
+                {total}
+                {` of sunshine in the past ${pastDays} days`}
+            </div>
+            {loading && <p>Loading...</p>}
+            <div className="flex gap-x-4 ">
+                <Button onClick={() => setPastDays(5)} text={"GET 5"} />
+                <Button onClick={() => setPastDays(10)} text={"GET 10"} />
+                <Button onClick={() => setPastDays(15)} text={"GET 15"} />
+            </div>
+        </div>
+    );
+}
+{
+    /* Will comment this out since it is not used Im returning only the total amount          <ul>
                 {data.map((item) => (
                     <li key={item.date}>
                         {item.date}:{" "}
@@ -36,20 +51,10 @@ export default function App() {
                         {item.sunshine / 3600 < 1 ? "minutes" : "hours"}
                     </li>
                 ))}
-            </ul>
-            <div>
-                <button onClick={() => setPastDays(10)}>Get 10</button>
-            </div>
-            <div>
-                {" "}
-                <button onClick={() => setPastDays(5)}>Get 5</button>
-            </div>
-            {/* This is the forecast part, which is not necessary yet <div>
-                {" "}
-                <button onClick={() => setForecastDays(5)}>Get 5</button>
-            </div>*/}
-            <div>{total}</div>
-            {loading && <p>Loading...</p>}
-        </div>
-    );
+            </ul>*/
 }
+{
+}
+/* This is the forecast part, which is not necessary yet <div>
+                {" "}
+                <button onClick={() => setForecastDays(5)}>Get 5</button>*/
