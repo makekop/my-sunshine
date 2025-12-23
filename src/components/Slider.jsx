@@ -7,7 +7,7 @@ export default function SliderSizes({ value, onChange }) {
     };
 
     return (
-        <div className="flex justify-center items-center mt-0">
+        <div className="flex justify-center items-center mt-2">
             <Box sx={{ width: 300 }}>
                 <Slider
                     value={value}

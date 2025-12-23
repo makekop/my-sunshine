@@ -4,10 +4,10 @@ export default function Button({ onClick, text, active }) {
             onClick={onClick}
             className={`
                 mb-0
-                w-16 sm:w-20 h-10
+                w-20 sm:w-28 h-16
                 flex items-center justify-center
                 rounded-md
-                text-sm font-semibold
+                text-xl font-semibold
                 transition
                 ${
                     active

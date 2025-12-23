@@ -35,15 +35,15 @@ export default function App() {
                 className="flex flex-col items-center justify-center
                 gap-6 sm:gap-10
                 rounded-xl bg-gray-700 
-                p-6 sm:p-10
-                min-h-[280px] w-full max-w-[420px] mx-4
+                p-10 sm:p-14
+                min-h-[280px] w-full max-w-[640px] mx-4
                 sm:mx-0"
             >
                 {loading ? (
                     <p className="text-white text-center">Loading...</p>
                 ) : (
                     <>
-                        <div className="text-xl text-center text-white mb-2">
+                        <div className="text-2xl sm:text-3xl text-center text-white mb-2">
                             {total !== "" ? (
                                 <>
                                     Over the past{" "}
