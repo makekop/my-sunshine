@@ -20,29 +20,11 @@ export async function getSunShineData(past_days = 0, forecast_days = 0) {
             sunshine: data.daily.sunshine_duration[i] ?? 0,
         }));
 
-        const sumWithSunInitial = sunshineAndDateData.reduce(
-            (acc, item) => acc + item.sunshine,
-            0
-        );
-        function sunshineTotalReturn(sum) {
-            if (sum === 0) return "0 minutes";
-            let h = Math.floor(sum / 3600);
-            let m = Math.floor((sum % 3600) / 60);
-            //let s = Math.floor((sum % 3600) % 60);
-
-            const hDisplay = h > 0 ? h + (h === 1 ? " hour " : " hours ") : "";
-            const mDisplay =
-                m > 0 ? m + (m === 1 ? " minute" : " minutes ") : "";
-            return hDisplay + mDisplay;
-        }
-        const sunshineTotal = sunshineTotalReturn(sumWithSunInitial);
-
         return {
             daily: sunshineAndDateData,
-            total: sunshineTotal,
         };
     } catch (err) {
         console.error("Error", err);
-        return [];
+        return { daily: [] };
     }
 }
