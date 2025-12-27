@@ -2,8 +2,8 @@
 
 export async function getSunShineData(past_days = 0, forecast_days = 0) {
     const dataObject = {
-        latitude: 60.17136,
-        longitude: 24.927353,
+        latitude: 60.3172,
+        longitude: 24.9633,
         timezone: "auto",
         daily: "sunshine_duration",
         past_days: past_days,
@@ -19,6 +19,7 @@ export async function getSunShineData(past_days = 0, forecast_days = 0) {
             date,
             sunshine: data.daily.sunshine_duration[i] ?? 0,
         }));
+
         const sumWithSunInitial = sunshineAndDateData.reduce(
             (acc, item) => acc + item.sunshine,
             0
@@ -27,7 +28,7 @@ export async function getSunShineData(past_days = 0, forecast_days = 0) {
             if (sum === 0) return "0 minutes";
             let h = Math.floor(sum / 3600);
             let m = Math.floor((sum % 3600) / 60);
-            let s = Math.floor((sum % 3600) % 60);
+            //let s = Math.floor((sum % 3600) % 60);
 
             const hDisplay = h > 0 ? h + (h === 1 ? " hour " : " hours ") : "";
             const mDisplay =
