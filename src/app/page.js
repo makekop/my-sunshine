@@ -8,7 +8,7 @@ export default function App() {
     const [pastDays, setPastDays] = useState(null);
     const [forecastDays, setForecastDays] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [allData, setAllData] = useState(null); // Added this - was missing
+    const [allData, setAllData] = useState(null);
     const [total, setTotal] = useState("");
     const [sliderValue, setSliderValue] = useState(null);
 
@@ -29,7 +29,6 @@ export default function App() {
         load();
     }, []);
 
-    // Calculate total when pastDays changes
     useEffect(() => {
         if (!allData || pastDays === null) return;
         function sunShineTotal(sum) {
@@ -88,7 +87,7 @@ export default function App() {
                                         key={days}
                                         onClick={() => setPastDays(days)}
                                         text={`${days} days`}
-                                        active={pastDays === days} // Fixed: was setPastDays === days
+                                        active={pastDays === days}
                                     />
                                 ))}
                             </div>
