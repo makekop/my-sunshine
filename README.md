@@ -4,23 +4,14 @@ A tiny web app that shows **how much sunshine Helsinki has received** over a sel
 
 You can choose preset ranges (5, 10, 15, 30 days) or use a slider to pick any number of days and the app calculates the total sunshine automatically.
 
-This project was built to practice **Next.js, server actions, and Tailwind CSS**.
-
 ---
-
-## 🎥 Demo
-
-<video src="https://raw.githubusercontent.com/makekop/my-sunshine/main/assets/demovideo.mp4" controls width="600">
-</video>
-
 
 ## ✨ Features
 
 * 📡 Fetches sunshine data on the **server side**
 * ⏳ Converts raw seconds into readable time (hours + minutes)
 * 🎚 Interactive slider + preset buttons
-* 🎨 Clean Tailwind UI
-* ⚡ No database — everything is calculated from API responses
+* 🎨 Tailwind UI
 
 ---
 
@@ -82,8 +73,8 @@ Then it displays:
 ## 🧭 Roadmap (maybe later)
 
 * Add other cities
-* Visual charts
-* Compare past vs forecast
+* Add forecast for sunshine
+* Compare cities
 
 ---
 
