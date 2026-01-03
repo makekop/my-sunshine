@@ -77,7 +77,7 @@ export default function App() {
                                     of sunshine
                                 </>
                             ) : (
-                                "Check how much Helsinki, Finland has had sunshine in past :"
+                                "Check how much Helsinki, Finland has had sunshine in past"
                             )}
                         </div>
                         <div className="flex flex-col items-center gap-2">

@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Perfect — thanks for the context.
+Since your app **does NOT use a database** and just calls the API on the server side, the README should reflect that.
 
-## Getting Started
+Here’s an updated, accurate README you can use 👇
+(Replace your old one with this.)
 
-First, run the development server:
+---
+
+# 🌤 My Sunshine — Helsinki Sunshine Tracker
+
+A tiny web app that shows **how much sunshine Helsinki has received** over a selected number of past days.
+
+You can choose preset ranges (5, 10, 15, 30 days) or use a slider to pick any number of days and the app calculates the total sunshine automatically.
+
+This project was built to practice **Next.js, server actions, and Tailwind CSS**.
+
+---
+
+## 🎥 Demo
+
+--
+
+<video src="https://raw.githubusercontent.com/makekop/my-sunshine/main/assets/demovideo.mov" controls width="600">
+</video>
+
+--
+
+## ✨ Features
+
+* 📡 Fetches sunshine data on the **server side**
+* ⏳ Converts raw seconds into readable time (hours + minutes)
+* 🎚 Interactive slider + preset buttons
+* 🎨 Clean Tailwind UI
+* ⚡ No database — everything is calculated from API responses
+
+---
+
+## 🛠 Tech Stack
+
+* **Next.js (App Router)**
+* **React**
+* **Tailwind CSS**
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repo
+
+```bash
+git clone https://github.com/makekop/my-sunshine.git
+cd my-sunshine
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in your browser:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The page fetches sunshine data automatically.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔍 How It Works
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1️⃣ The app calls a sunshine API on the **server**.
+2️⃣ It stores the daily sunshine values in memory.
+3️⃣ When the user selects a timeframe, the app:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* slices the last N days
+* sums the total seconds
+* converts them to *hours + minutes*
 
-## Deploy on Vercel
+Then it displays:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> *Over the past X days, Helsinki has had Y hours Z minutes of sunshine.*
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🧭 Roadmap (maybe later)
+
+* Add other cities
+* Visual charts
+* Compare past vs forecast
+
+---
+
+## 🤝 Contributing
+
+All Suggestions & PRs are welcome!
+
+---
