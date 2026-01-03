@@ -8,12 +8,10 @@ This project was built to practice **Next.js, server actions, and Tailwind CSS**
 
 ---
 
-    ## 🎥 Demo
+## 🎥 Demo
 
-
-    <video src="https://raw.githubusercontent.com/makekop/my-sunshine/main/assets/demovideo.mp4" controls width="600">
-    </video>
-
+<video src="https://raw.githubusercontent.com/makekop/my-sunshine/main/assets/demovideo.mp4" controls width="600">
+</video>
 
 
 ## ✨ Features
