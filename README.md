@@ -1,11 +1,3 @@
-Perfect — thanks for the context.
-Since your app **does NOT use a database** and just calls the API on the server side, the README should reflect that.
-
-Here’s an updated, accurate README you can use 👇
-(Replace your old one with this.)
-
----
-
 # 🌤 My Sunshine — Helsinki Sunshine Tracker
 
 A tiny web app that shows **how much sunshine Helsinki has received** over a selected number of past days.
@@ -16,14 +8,13 @@ This project was built to practice **Next.js, server actions, and Tailwind CSS**
 
 ---
 
-## 🎥 Demo
+    ## 🎥 Demo
 
---
 
-<video src="https://raw.githubusercontent.com/makekop/my-sunshine/main/assets/demovideo.mov" controls width="600">
-</video>
+    <video src="https://raw.githubusercontent.com/makekop/my-sunshine/main/assets/demovideo.mp4" controls width="600">
+    </video>
 
---
+
 
 ## ✨ Features
 
