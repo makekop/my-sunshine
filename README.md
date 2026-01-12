@@ -73,7 +73,7 @@ Then it displays:
 
 ---
 
-## 🧭 Roadmap (maybe later)
+## Roadmap (maybe later)
 
 * Add other cities
 * Add forecast for sunshine
@@ -81,7 +81,7 @@ Then it displays:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 All Suggestions & PRs are welcome!
 
