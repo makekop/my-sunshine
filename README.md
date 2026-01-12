@@ -6,16 +6,19 @@ You can choose preset ranges (5, 10, 15, 30 days) or use a slider to pick any nu
 
 ---
 
-## ✨ Features
+## Features
 
-* 📡 Fetches sunshine data on the **server side**
-* ⏳ Converts raw seconds into readable time (hours + minutes)
-* 🎚 Interactive slider + preset buttons
-* 🎨 Tailwind UI
+* Fetches sunshine data on the **server side**
+* Converts raw seconds into readable time (hours + minutes)
+* Interactive slider + preset buttons
+* Tailwind UI
 
 ---
 
-## 🛠 Tech Stack
+## Live Demo
+https://my-sunshine-rho.vercel.app/
+
+## Tech Stack
 
 * **Next.js (App Router)**
 * **React**
@@ -23,7 +26,7 @@ You can choose preset ranges (5, 10, 15, 30 days) or use a slider to pick any nu
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1️⃣ Clone the repo
 
@@ -83,3 +86,6 @@ Then it displays:
 All Suggestions & PRs are welcome!
 
 ---
+
+## Licence
+MIT
