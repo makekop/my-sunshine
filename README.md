@@ -22,6 +22,7 @@ https://my-sunshine-rho.vercel.app/
 
 * **Next.js (App Router)**
 * **React**
+* **Javascript**
 * **Tailwind CSS**
 
 ---
