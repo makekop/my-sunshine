@@ -4,6 +4,7 @@ import { getSunShineData } from './actions';
 import Button from '../components/Button';
 import SliderSizes from '../components/Slider';
 import { useSunshineTotal } from './hooks/useSunshineTotal';
+import LoadingPulse from '../components/LoadingPulse';
 
 export default function App() {
   const [pastDays, setPastDays] = useState(null);
@@ -41,7 +42,7 @@ export default function App() {
                 sm:mx-0"
       >
         {loading ? (
-          <p className="text-slate-400 animate-pulse text-xl">Loading...</p>
+          <LoadingPulse />
         ) : (
           <>
             <div className="text-2xl sm:text-3xl text-center text-slate-300 mb-2">
