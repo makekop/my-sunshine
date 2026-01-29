@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { getSunShineData } from './actions';
+import { getSunShineData } from './actions/actions';
 import Button from '../components/Button';
 import SliderSizes from '../components/Slider';
 import { useSunshineTotal } from './hooks/useSunshineTotal';
