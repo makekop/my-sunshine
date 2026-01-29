@@ -3,16 +3,17 @@ import { useState, useEffect } from 'react';
 import { getSunShineData } from './actions';
 import Button from '../components/Button';
 import SliderSizes from '../components/Slider';
+import { useSunshineTotal } from './hooks/useSunshineTotal';
 
 export default function App() {
   const [pastDays, setPastDays] = useState(null);
-  const [forecastDays, setForecastDays] = useState(null);
   const [loading, setLoading] = useState(false);
   const [allData, setAllData] = useState(null);
-  const [total, setTotal] = useState('');
   const [sliderValue, setSliderValue] = useState(null);
 
   const dayOptions = [5, 10, 15, 30];
+
+  const total = useSunshineTotal(allData, pastDays);
 
   useEffect(() => {
     async function load() {
@@ -28,25 +29,6 @@ export default function App() {
     }
     load();
   }, []);
-
-  useEffect(() => {
-    if (!allData || pastDays === null) return;
-    function sunShineTotal(sum) {
-      if (sum === 0) return '0 minutes';
-      let h = Math.floor(sum / 3600);
-      let m = Math.floor((sum % 3600) / 60);
-      const hDisplay = h > 0 ? h + (h === 1 ? ' hour ' : ' hours ') : '';
-      const mDisplay = m > 0 ? m + (m === 1 ? ' minute' : ' minutes ') : '';
-      return hDisplay + mDisplay;
-    }
-    const relevantDays = allData.slice(-pastDays);
-    const sumSeconds = relevantDays.reduce(
-      (acc, item) => acc + item.sunshine,
-      0,
-    );
-    const sunshineTotalVariable = sunShineTotal(sumSeconds);
-    setTotal(sunshineTotalVariable);
-  }, [pastDays, allData]);
 
   return (
     <div className="bg-slate-950 min-h-screen flex items-center justify-center">
