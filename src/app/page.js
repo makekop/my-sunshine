@@ -8,7 +8,7 @@ import LoadingPulse from '../components/LoadingPulse';
 
 export default function App() {
   const [pastDays, setPastDays] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [allData, setAllData] = useState(null);
   const [sliderValue, setSliderValue] = useState(null);
 
